@@ -1,0 +1,32 @@
+.container {
+  border: 2px solid black;
+  border-top: none;
+  position: relative;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray !important;
+}
+.task {
+  display: flex;
+  background-color: white;
+  color: black;
+  gap: 10px;
+  padding: 0 1rem;
+  height: 2.5rem;
+}
+.task > div {
+  display: flex;
+  align-items: center;
+}
+.taskList {
+  transform: translateY(-2.5rem);
+}
+.transitioned {
+  transition: margin-top 1s;
+  margin-top: 2.5rem !important;
+}
+.transitioning {
+  margin-top: 0;
+}

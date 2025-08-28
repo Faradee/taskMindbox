@@ -1,0 +1,56 @@
+:root {
+  background-color: rgb(41, 41, 41);
+  color: ghostwhite;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif;
+}
+.ctrl-container {
+  min-width: 800px;
+  display: flex;
+  flex-direction: column;
+}
+.textField {
+  display: flex;
+  background-color: white;
+  border: 2px solid black;
+  padding: 0 2px;
+  z-index: 2;
+  position: relative;
+}
+.taskList {
+  transform: translateY(-2.5rem);
+}
+.transitioned {
+  transition: margin-top 1s;
+  margin-top: 2.5rem !important;
+}
+.transitioning {
+  margin-top: 0;
+}
+.textField > svg {
+  margin: auto;
+}
+.icon {
+  display: flex;
+  cursor: pointer;
+}
+.icon > svg {
+  margin: auto;
+}
+input {
+  height: 2.5rem;
+  font-size: 20px;
+  width: 100%;
+  border: none;
+}
+input:focus,
+input:active {
+  outline: none;
+}
+.ctrl-container > p {
+  font-size: 64px;
+  text-align: center;
+}
