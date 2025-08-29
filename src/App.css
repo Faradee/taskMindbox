@@ -2,13 +2,15 @@
   background-color: rgb(41, 41, 41);
   color: ghostwhite;
 }
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
 .container {
   display: flex;
   justify-content: center;
-  font-family: sans-serif;
 }
 .ctrl-container {
-  min-width: 800px;
+  min-width: 500px;
   display: flex;
   flex-direction: column;
 }

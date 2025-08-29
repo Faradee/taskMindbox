@@ -4,10 +4,12 @@ import type { task } from "../../App";
 import type { Dispatch, SetStateAction } from "react";
 const TaskListControllers = ({
   setMode,
+  mode,
   setTasks,
   tasks,
 }: {
   setMode: Dispatch<SetStateAction<mode>>;
+  mode: mode;
   setTasks: Dispatch<SetStateAction<task[]>>;
   tasks: task[];
 }) => {
@@ -28,9 +30,15 @@ const TaskListControllers = ({
     <div className={styles.controllers}>
       <div>Active tasks: {activeTasks.length}</div>
       <div className={styles.filters}>
-        <button onClick={showAll}>All</button>
-        <button onClick={showActive}>Active</button>
-        <button onClick={showCompleted}>Completed</button>
+        <button className={mode === "all" ? styles.selected : undefined} onClick={showAll}>
+          All
+        </button>
+        <button className={mode === "active" ? styles.selected : undefined} onClick={showActive}>
+          Active
+        </button>
+        <button className={mode === "completed" ? styles.selected : undefined} onClick={showCompleted}>
+          Completed
+        </button>
       </div>
       <button onClick={clearCompleted}>Clear completed</button>
     </div>

@@ -36,7 +36,7 @@ const TaskList = ({ tasks, setTasks, transition }: taskListProps) => {
   }
   return (
     <>
-      <TaskListControllers tasks={tasks} setMode={setMode} setTasks={setTasks} />
+      <TaskListControllers tasks={tasks} mode={mode} setMode={setMode} setTasks={setTasks} />
       {filtered.length ? (
         <div className={styles.taskList}>
           <div className={`${!transition || mode === "completed" ? styles.transitioned : styles.transitioning}`}>
