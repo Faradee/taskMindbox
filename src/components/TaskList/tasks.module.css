@@ -52,9 +52,27 @@
 .filters > button {
   width: 5rem;
   height: 1.5rem;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+.filters > button:hover {
+  background-color: rgb(230, 230, 230);
+}
+.filters > button:active {
+  background-color: rgb(205, 205, 205);
 }
 .controllers > Button {
   height: 1.5rem;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+.controllers > button:hover {
+  background-color: rgb(230, 230, 230);
+}
+.controllers > button:active {
+  background-color: rgb(205, 205, 205);
 }
 .controllers {
   height: 1.5rem;
