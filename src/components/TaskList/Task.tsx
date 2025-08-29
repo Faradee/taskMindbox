@@ -5,7 +5,7 @@ import CircleOutlinedIcon from "@mui/icons-material/CircleOutlined";
 const Task = ({ task, toggle }: { task: task; toggle: () => void }) => {
   return (
     <div className={`${styles.task} ${task.completed ? styles.completed : undefined}`}>
-      <div onClick={toggle} className="icon">
+      <div onClick={toggle} className={task.completed ? styles.inactiveIcon : styles.activeIcon}>
         {task.completed ? <CheckIcon color="success" /> : <CircleOutlinedIcon />}
       </div>
       <div>{task.title}</div>

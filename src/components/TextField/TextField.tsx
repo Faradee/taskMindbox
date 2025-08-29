@@ -17,12 +17,7 @@ const TextField = ({ handleNewTask, setTitle, title }: textFieldProps) => {
     >
       <div className={styles.textField}>
         <ArrowForwardIosIcon color="disabled" />
-        <input
-          type="text"
-          placeholder="Название задания..."
-          value={title}
-          onChange={(e) => setTitle(e.currentTarget.value)}
-        />
+        <input type="text" placeholder="New task..." value={title} onChange={(e) => setTitle(e.currentTarget.value)} />
         <div className={styles.icon} onClick={handleNewTask}>
           <SendIcon color="disabled" />
         </div>

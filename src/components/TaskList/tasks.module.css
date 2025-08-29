@@ -40,3 +40,32 @@
 .transitioning {
   margin-top: 0;
 }
+.activeIcon {
+  cursor: pointer;
+}
+.inactiveIcon {
+  cursor: default;
+}
+.filters {
+  display: flex;
+}
+.filters > button {
+  width: 5rem;
+  height: 1.5rem;
+}
+.controllers > Button {
+  height: 1.5rem;
+}
+.controllers {
+  height: 1.5rem;
+  position: relative;
+  background-color: white;
+  border-left: 2px black solid;
+  border-right: 2px black solid;
+  border-bottom: 2px black solid;
+  color: black;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
