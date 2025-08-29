@@ -12,35 +12,6 @@
   display: flex;
   flex-direction: column;
 }
-.textField {
-  display: flex;
-  background-color: white;
-  border: 2px solid black;
-  padding: 0 2px;
-  z-index: 2;
-  position: relative;
-}
-
-.textField > svg {
-  margin: auto;
-}
-.icon {
-  display: flex;
-  cursor: pointer;
-}
-.icon > svg {
-  margin: auto;
-}
-input {
-  height: 2.5rem;
-  font-size: 20px;
-  width: 100%;
-  border: none;
-}
-input:focus,
-input:active {
-  outline: none;
-}
 .ctrl-container > p {
   font-size: 64px;
   text-align: center;

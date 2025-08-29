@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 import TaskList from "./components/TaskList/TaskList";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import SendIcon from "@mui/icons-material/Send";
+import TextField from "./components/TextField/TextField";
+
 export type task = {
   title: string;
   id: number;
@@ -28,25 +28,7 @@ function App() {
     <div className="container">
       <div className="ctrl-container">
         <p>Todos</p>
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            handleNewTask();
-          }}
-        >
-          <div className="textField">
-            <ArrowForwardIosIcon color="disabled" />
-            <input
-              type="text"
-              placeholder="Название задания..."
-              value={title}
-              onChange={(e) => setTitle(e.currentTarget.value)}
-            />
-            <div className="icon" onClick={handleNewTask}>
-              <SendIcon color="disabled" />
-            </div>
-          </div>
-        </form>
+        <TextField handleNewTask={handleNewTask} title={title} setTitle={setTitle} />
         <TaskList tasks={tasks} setTasks={setTasks} transition={transition} />
       </div>
     </div>
