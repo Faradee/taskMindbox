@@ -39,7 +39,7 @@ const TaskList = ({ tasks, setTasks, transition }: taskListProps) => {
       <TaskListControllers tasks={tasks} setMode={setMode} setTasks={setTasks} />
       {filtered.length ? (
         <div className={styles.taskList}>
-          <div className={`${!transition ? styles.transitioned : styles.transitioning}`}>
+          <div className={`${!transition || mode === "completed" ? styles.transitioned : styles.transitioning}`}>
             <div className={styles.container}>
               {filtered.map((task) => (
                 <Task key={task.id} task={task} toggle={() => toggle(task.id)} />
