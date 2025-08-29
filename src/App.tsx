@@ -47,15 +47,7 @@ function App() {
             </div>
           </div>
         </form>
-        {tasks.length ? (
-          <div className="taskList">
-            <div className={`${!transition ? "transitioned" : "transitioning"}`}>
-              <TaskList tasks={tasks} setTasks={setTasks} />
-            </div>
-          </div>
-        ) : (
-          <></>
-        )}
+        <TaskList tasks={tasks} setTasks={setTasks} transition={transition} />
       </div>
     </div>
   );

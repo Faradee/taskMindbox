@@ -30,3 +30,13 @@
 .transitioning {
   margin-top: 0;
 }
+.taskList {
+  transform: translateY(-2.5rem);
+}
+.transitioned {
+  transition: margin-top 1s;
+  margin-top: 2.5rem !important;
+}
+.transitioning {
+  margin-top: 0;
+}
